@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Important: Keeps padding inside the width */
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #007bff; /* Example focus color */
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .remember-me input {
+            margin-right: 5px;
+            width: auto; }
+          
+        
+
+        .forgot-password {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .forgot-password a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="#" method="post"> <!--  Replace "#" with your actual form submission URL -->
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <div class="remember-me">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Remember me</label>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="forgot-password">
+                <a href="#">Forgot password?</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
+<script>
+    // Function to prompt user for code generation
+    function promptForCodeGeneration() {
+        const userPrompt = prompt("Please enter your code generation request:");
+        if (userPrompt) {
+            // Call the function to handle code generation
+            generateCode(userPrompt);
+        }
+    }
+
+    // Function to handle code generation logic
+    function generateCode(prompt) {
+        console.log("Generating code for:", prompt);
+        // Here you would implement the logic to generate code based on the user's input
+        // For example, you could call an API or use a library to generate the code
+    }
+
+    // Example of how this function might be used in your application
+    const commands = {
+        "open file": () => openFile(),
+        "close file": () => closeFile(),
+        "show code editor": () => showCodeEditor(),
+        "hide code editor": () => hideCodeEditor(),
+        "save current file": () => saveCurrentFile(),
+        "generate code for me": () => promptForCodeGeneration()
+
+    };
+    // Example command usage
+    commands["open file"](); // This will call the openFile function
+    commands["generate code for me"](); // This will prompt the user for code generation
+</script>

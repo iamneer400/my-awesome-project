@@ -1,0 +1,291 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafc;
+      color: #1a1f2e;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    /* preserve original container structure & spacing exactly as before, 
+       only text content updated – no layout modifications. */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* Header (exact same structure, text updated) */
+    header {
+      background-color: #ffffff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #2563eb, #1e40af);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      letter-spacing: -0.3px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #2d3a4b;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #2563eb;
+    }
+
+    /* Hero section – same structure, updated copy */
+    .hero {
+      padding: 80px 0 70px 0;
+      background: linear-gradient(120deg, #f0f4fe 0%, #ffffff 100%);
+    }
+
+    .hero-grid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+
+    .hero-content {
+      flex: 1;
+    }
+
+    .hero-content h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: #0a2540;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      color: #3a546d;
+      max-width: 550px;
+      margin-bottom: 32px;
+    }
+
+    .btn-primary {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 40px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.2s;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+    }
+
+    .hero-image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .hero-image i {
+      font-size: 12rem;
+      color: #2563eb;
+      opacity: 0.8;
+    }
+
+    /* Features / highlights — same layout, new textual refresh */
+    .highlights {
+      padding: 70px 0;
+      background: #fff;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 48px;
+      color: #0f172a;
+    }
+
+    .cards {
+      display: flex;
+      gap: 32px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 32px 24px;
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.05);
+      flex: 1;
+      min-width: 250px;
+      transition: all 0.2s;
+      border: 1px solid #edf2f7;
+      text-align: center;
+    }
+
+    .card i {
+      font-size: 2.8rem;
+      color: #2563eb;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .card p {
+      color: #475569;
+      line-height: 1.5;
+    }
+
+    /* Services / Products Page Section (exact same layout, updated wording) */
+    .services-section {
+      padding: 70px 0;
+      background-color: #f8fafc;
+    }
+
+    .services-grid {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .service-item {
+      background: white;
+      border-radius: 28px;
+      padding: 36px 28px;
+      flex: 1 1 280px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      transition: all 0.25s ease;
+      border: 1px solid #eef2ff;
+    }
+
+    .service-item i {
+      font-size: 2.4rem;
+      background: #eef2ff;
+      padding: 14px;
+      border-radius: 20px;
+      color: #2563eb;
+      margin-bottom: 24px;
+      display: inline-block;
+    }
+
+    .service-item h3 {
+      font-size: 1.6rem;
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+
+    .service-item p {
+      color: #334155;
+      margin-bottom: 20px;
+    }
+
+    .badge {
+      font-size: 0.8rem;
+      font-weight: 600;
+      background: #eef2ff;
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 30px;
+      color: #1e40af;
+    }
+
+    /* CTA section (same layout, fresh text) */
+    .cta {
+      background: #0f172a;
+      color: white;
+      padding: 70px 0;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 2.2rem;
+      margin-bottom: 16px;
+    }
+
+    .cta p {
+      max-width: 600px;
+      margin: 0 auto 32px auto;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    .btn-secondary {
+      background: white;
+      color: #0f172a;
+      padding: 12px 32px;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.2s;
+    }
+
+    .btn-secondary:hover {
+      background: #e2e8f0;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background: #ffffff;
+      padding: 40px 0;
+      border-top: 1px solid #eef2ff;
+      text-align: center;
+      color: #5b6e8c;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 16px;
+      }
+      .hero-content h1 {
+        font-size: 2.3rem;
+      }
+      .hero-grid {
+        flex-direction: column;
+      }
+      .container {
+        padding: 0 20px;
+      }
+    }
